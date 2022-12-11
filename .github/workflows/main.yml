@@ -1,7 +1,7 @@
-name: Ecommerce App
+name: State App
 on:
   push:
-    branches: [session_3]
+    branches: [session_4]
 #     A workflow run is made up of none
 jobs:
   # This Workflow contains a single job called "build"
@@ -11,20 +11,18 @@ jobs:
     steps:
       # Checks-out you repository under $GITHUB_WORKSPACE, So your job can access it
       - uses: actions/checkout@v2
-#       Step: 1
+      #       Step: 1
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.5.1
-#       Step: 2
+      #       Step: 2
       - name: Installing Node Moduels
-        run:  npm install
-#       Step: 3
+        run: cd 004_state && npm install
+      #       Step: 3
       - name: Creating a Project Build
-        run: npm run build
-#       Step: 4
+        run: cd 004_state && npm run build
+      #       Step: 4
       - name: Installing Surge
-        run: npm install -g surge
-#       Step: 5
+        run: cd 004_state && npm install -g surge
+      #       Step: 5
       - name: Deploy Website on Surge
-        run:  surge ./build http://dinner-cafe.surge.sh --token {{secrets.SURGE_TOKKEN}}
-
-        
+        run: cd 004_state && surge ./build http://react-statefull.surge.sh --token {{secrets.SURGE_TOKKEN}}
