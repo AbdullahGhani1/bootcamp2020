@@ -27,4 +27,4 @@ jobs:
         run: npm install -g surge
       #       Step: 5
       - name: Deploy Website on Surge
-        run: surge ./003-props/build http://dinner-cafe.surge.sh --token {{secrets.SURGE_TOKKEN}}
+        run: cd 003-props && surge ./build http://dinner-cafe.surge.sh/ --token ${{secrets.SURGE_TOKKEN}}
