@@ -21,7 +21,7 @@ jobs:
         run: cd 003-props && npm install
       #       Step: 3
       - name: Creating a Project Build
-        run: npm run build
+        run: cd 003-props && npm run build
       #       Step: 4
       - name: Installing Surge
         run: npm install -g surge
