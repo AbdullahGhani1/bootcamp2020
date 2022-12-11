@@ -1,12 +1,16 @@
 import React from "react";
-
+import "./Dinner.css";
 const Dinner = (props) => {
-  const menu = ["Chicken", "Beef", "Fish"];
-  const { dish } = props;
   return (
-    <h1>
-      Today's Dinner Menu {menu[0]}, {dish}
-    </h1>
+    <div className="card">
+      <div className="card-header">
+        <img src={props.img} alt="" />
+      </div>
+      <div className="card-content">
+        <h3 className="card-title">{props.title}</h3>
+        <p className="card-description">{props.description}</p>
+      </div>
+    </div>
   );
 };
 
