@@ -11,20 +11,18 @@ jobs:
     steps:
       # Checks-out you repository under $GITHUB_WORKSPACE, So your job can access it
       - uses: actions/checkout@v2
-#       Step: 1
+      #       Step: 1
       - name: Setup Node.js environment
         uses: actions/setup-node@v3.5.1
-#       Step: 2
+      #       Step: 2
       - name: Installing Node Moduels
-        run:  npm install
-#       Step: 3
+        run: npm install
+      #       Step: 3
       - name: Creating a Project Build
         run: npm run build
-#       Step: 4
+      #       Step: 4
       - name: Installing Surge
         run: npm install -g surge
-#       Step: 5
+      #       Step: 5
       - name: Deploy Website on Surge
-        run:  surge ./build http://dinner-cafe.surge.sh --token {{secrets.SURGE_TOKKEN}}
-
-        
+        run: surge ./build http://dinner-cafe.surge.sh --token {{secrets.SURGE_TOKKEN}}
