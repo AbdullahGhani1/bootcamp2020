@@ -18,7 +18,7 @@ jobs:
           node-version: 12
       #       Step: 2
       - name: Installing Node Moduels
-        run: npm install
+        run: cd 003-props && npm install
       #       Step: 3
       - name: Creating a Project Build
         run: npm run build
