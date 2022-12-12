@@ -1,10 +1,18 @@
 .App {
   text-align: center;
+  height: 100vh;
 }
-button {
-  background-color: black;
-  border: none;
+.App-header {
+  background-color: #282c34;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
   color: white;
+}
+.btn {
+  border: none;
   width: 100px;
   padding: 20px;
   text-align: center;
@@ -15,6 +23,19 @@ button {
 }
 span {
   font-size: 72px;
-  color: black;
   margin: 10px;
+}
+.toggle {
+  background-color: #3f53;
+  color: white;
+  border: none;
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  text-align: center;
+  font-size: 28px;
+  margin: 10px 20px;
+  cursor: pointer;
+
+  border-radius: 50%;
 }
