@@ -25,4 +25,4 @@ jobs:
         run: cd 004_state && npm install -g surge
       #       Step: 5
       - name: Deploy Website on Surge
-        run: cd 004_state && surge ./build http://react-statefull.surge.sh --token {{secrets.SURGE_TOKKEN}}
+        run: cd 004_state && surge ./build http://react-statefull.surge.sh/ --token ${{secrets.SURGE_TOKKEN}}
